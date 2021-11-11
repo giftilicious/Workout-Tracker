@@ -21,7 +21,7 @@ The user is able to:
   * View the total duration of each workout from the past seven workouts.
 
 
-## Technologies Used
+## Technologies / Languages Used
 * MongoDB, Mongoose
 * NoSQL
 * Node.js, Express.js

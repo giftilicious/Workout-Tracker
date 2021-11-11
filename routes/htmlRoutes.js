@@ -1,15 +1,15 @@
 const router = require('express').Router()
 const path = require('path');
 
-// need a /exercise 
+// for /exercise routes
 router.get('/exercise', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/exercise.html'))
 })
-// /stats routes
+// /stats route
 router.get('/stats', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/stats.html'))
 })
-// need / route
+// / route
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
