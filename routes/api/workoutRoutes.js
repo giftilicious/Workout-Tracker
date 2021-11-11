@@ -1,13 +1,21 @@
 const router = require('express').Router()
-const Workout = require('../../models'); 
+const { Workout } = require('../../models');
 
-// create routes for each fetch in api.js
+// create routes to each fetch in api.js
 
 router.get('/', async (req, res) => {
+  console.log('workout get')
   try {
-    const workoutData = await Workout.findAll().aggregate([
-    { $addFields: { totalDuration: { $sum: "$exercises.duration" } } }
-  ]);
+    const workoutData = await Workout.aggregate([
+      {
+        $addFields:
+        {
+          totalDuration:
+            { $sum: '$exercises.duration', }
+        },
+      },
+    ]);
+    console.log(workoutData)
     res.status(200).json(workoutData);
   } catch (err) {
     res.status(500).json(err);
@@ -17,19 +25,14 @@ router.get('/', async (req, res) => {
 // router.put
 router.put('/:id', async (req, res) => {
   try {
-      const workoutData = await Workout.update(req.body, {
-      where: {
-          id: req.params.id,
-      },
-      });
-      // if (!workoutData[0]) {
-      // res.status(404).json({ message: 'No indoor activity with this ID' });
-      // }
-      res.status(200).json(workoutData);
+    const workoutData = await Workout.findByIdAndUpdate(req.params.id, {
+      $push: { exercises: req.body }
+    }, { new: true });
+    res.status(200).json(workoutData);
   } catch (err) {
-      res.status(500).json(err);
+    res.status(500).json(err);
   }
-  });
+});
 
 // router.post
 router.post('/', async (req, res) => {
