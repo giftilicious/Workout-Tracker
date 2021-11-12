@@ -28,7 +28,7 @@ The user is able to:
 * HTML, CSS, JavaScript
 * Heroku, MongoDB Atlas
 
-Click here to view the deployed application: https://quiet-savannah-46858.herokuapp.com/?id=618de915cc4a1e001696f7ae
+Click here to view the deployed application: https://quiet-savannah-46858.herokuapp.com/
 
 <img width="2048" alt="Screen Shot 2021-11-11 at 11 20 38 PM" src="https://user-images.githubusercontent.com/90150892/141408959-576a3e3d-b559-4941-b35a-95f27ffa32da.png">
 
