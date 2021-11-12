@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { Workout } = require('../../models');
 
 
-// create routes to each fetch in api.js
+// routes to each fetch in api.js
 router.get('/', async (req, res) => {
   try {
     const workoutData = await Workout.aggregate([
@@ -18,8 +18,8 @@ router.get('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const workoutData = await Workout.findByIdAndUpdate(
-      req.params.id, 
-      { $push: { exercises: req.body } }, 
+      req.params.id,
+      { $push: { exercises: req.body } },
       { new: true }
     );
     res.status(200).json(workoutData);
