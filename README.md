@@ -26,3 +26,11 @@ The user is able to:
 * NoSQL
 * Node.js, Express.js
 * HTML, CSS, JavaScript
+* Heroku, MongoDB Atlas
+
+Click here to view the deployed application: https://quiet-savannah-46858.herokuapp.com/?id=618de915cc4a1e001696f7ae
+
+<img width="2048" alt="Screen Shot 2021-11-11 at 11 20 38 PM" src="https://user-images.githubusercontent.com/90150892/141408959-576a3e3d-b559-4941-b35a-95f27ffa32da.png">
+
+<img width="2048" alt="Screen Shot 2021-11-11 at 11 20 50 PM" src="https://user-images.githubusercontent.com/90150892/141408990-072786d4-ae98-43e0-8df4-83387267da24.png">
+
