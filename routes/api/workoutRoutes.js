@@ -32,7 +32,7 @@ router.put('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const workoutData = await Workout.create(
-      { exercises: req.body }
+      req.body
     );
     res.status(200).json(workoutData);
   } catch (err) {
